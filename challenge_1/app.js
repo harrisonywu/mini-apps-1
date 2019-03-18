@@ -21,8 +21,21 @@ EXTRA
 add a button to the winning/tie alert that will allow for game to be reset
 
 */
+var currentPlayer = 'x';
 
-var buttons = document.getElementsByClassName('button');
+function playXorO() {
+  if (/* the current press has no plays*/) {
+    // change the text to be whatever is stored in current yplayer
+  } 
+  
+  // the below is so the next play is the correct player
+  if (currentPlayer === 'x') {
+    currentPlayer = 'o';
+  } else if (currentPlayer === 'o') {
+    currentPlayer ='x';
+  }
+}
 
-// var mainTarget = ________.addEventListener();
+var clickListener = document.getElementsByTagName('td');
 
+clickListener.addEventListener('click', playXorO)
