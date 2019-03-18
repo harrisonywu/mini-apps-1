@@ -25,8 +25,9 @@ var currentPlayer = 'x';
 
 function playXorO() {
   if (/* the current press has no plays*/true) {
-    // change the text to be whatever is stored in current yplayer
-  
+    // change the text of what is pressed 
+    // to be whatever is stored in current player
+    this.innerHTML=currentPlayer;
   } 
   
   // the below is so the next play is the correct player
@@ -39,4 +40,4 @@ function playXorO() {
 
 var clickListener = document.getElementsByTagName('td');
 
-clickListener.addEventListener('click', playXorO)
+document.addEventListener('click', playXorO)
