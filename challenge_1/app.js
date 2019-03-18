@@ -24,8 +24,9 @@ add a button to the winning/tie alert that will allow for game to be reset
 var currentPlayer = 'x';
 
 function playXorO() {
-  if (/* the current press has no plays*/) {
+  if (/* the current press has no plays*/true) {
     // change the text to be whatever is stored in current yplayer
+  
   } 
   
   // the below is so the next play is the correct player
