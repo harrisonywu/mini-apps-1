@@ -34,14 +34,14 @@ function playXorO() {
     this.innerText = currentPlayer;
     // change the text of what is pressed
     // to be whatever is stored in current player
-  } 
+  }
 }
 
 function changePlayer() {
   if (currentPlayer === 'x') {
     currentPlayer = 'o';
   } else if (currentPlayer === 'o') {
-    currentPlayer ='x';
+    currentPlayer = 'x';
   }
 }
 
