@@ -1,6 +1,4 @@
-// what do i need to do
-/* 
-1. instantiate what the board should first look like when loaded
+/*
 2. on click...
     a. place a marker at that position (rerender the button so it includes an x/o in it)
         The click is player X
@@ -21,16 +19,25 @@ EXTRA
 add a button to the winning/tie alert that will allow for game to be reset
 
 */
+// i need to create it so that when i click, i edit the matrix
+// aka need to do multiple things
+// onclick...
+//    1. change visually
+//    2. change the inner x and o's
+//      3. check if anyone had won or tied
+
+
 var currentPlayer = 'x';
 
 function playXorO() {
   if (/* the current press has no plays*/true) {
-    // change the text of what is pressed 
+    this.innerText = currentPlayer;
+    // change the text of what is pressed
     // to be whatever is stored in current player
-    this.innerHTML=currentPlayer;
   } 
-  
-  // the below is so the next play is the correct player
+}
+
+function changePlayer() {
   if (currentPlayer === 'x') {
     currentPlayer = 'o';
   } else if (currentPlayer === 'o') {
@@ -41,3 +48,4 @@ function playXorO() {
 var clickListener = document.getElementsByTagName('td');
 
 document.addEventListener('click', playXorO)
+
