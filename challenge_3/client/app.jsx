@@ -14,13 +14,27 @@ class App extends React.Component {
     super(props);
     // correct this state so it references the correct state
     this.state = {
+      currentForm: null
     }
-  }
+    this.checkoutClickHandler = this.checkoutClickHandler.bind(this);
+  // create a function for checkout where it changes onclick
+  // the state to Form1
+  
+}
+    checkoutClickHandler() {
+      this.setState({
+        currentForm: <Form1 />
+      })
+    }
   render() {
     return (
-      <Form1 />
+      <div>
+        <button onClick={this.checkoutClickHandler}>Checkout</button>
+        <div>{this.state.currentForm}</div>
+      </div>
+      
     )
   }
 }
 
-ReactDOM.render(<App />,document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'))
